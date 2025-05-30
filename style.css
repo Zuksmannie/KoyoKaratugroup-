@@ -1,0 +1,278 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f7f7;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+
+.logo-holder{
+    color: rgb(29, 29, 50);
+}
+.nav{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 0;
+    /* position: fixed; */
+}
+
+.container1{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-cta{
+    padding: 8px 12px;
+    background-color: rgba(56, 56, 56, 0);
+    color: rgb(67, 0, 167);
+    border: 2px solid  rgb(67, 0, 167);
+}
+
+
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.hero{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(67, 0, 167);
+    padding:6rem 0;
+    color: white;
+}
+
+.container2{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+}
+
+
+.hero-left{
+    width: 60%;
+    height: auto;
+}
+
+.hero-right{
+    width: 40%;
+    height: auto;
+}
+
+
+
+.hero-text-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+
+
+.hero-cta{
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.hero-primary{
+    padding: 8px 12px;
+    background-color: #FFD700;
+    width: 210px;
+    color: #1A1A1A;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
+
+.hero-primary:hover{
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+
+.hero-secondary{
+    width: 210px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid#E0CCFF;
+    padding: 8px 12px;
+    color: white;
+}
+
+
+
+
+.social-proof{
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.282);
+    margin-top: 2rem;
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+
+.about{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 253, 255);
+    padding: 5rem 0;
+}
+
+
+.container3{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-text-box{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-cta{
+    color: #FFD700;
+    background-color: white;
+    border: solid 2px #FFD700;
+    padding: 8px 16px;
+    margin-top: 2rem;
+}
+
+.about-image-wrapper{
+    width: 40%;
+}
+
+.about-image{
+    width: 100%;
+}
+
+.about-stats{
+    background-color: #e7e6df;
+    padding: 16px 16px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+
+.services{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0rem;
+
+}
+
+.container4{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.scard{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    background-color: #ffffff;
+    padding: 24px 24px;
+
+
+}
+
+.scard-image{
+    width: 100%;
+    height: auto;
+
+}
+
+.scard-img{
+    width: 100%;
+}
+
+.s-card-text{
+    width: 50%;
+    height: auto;
+}
+
+.scard-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;align-items: center;
+    gap: 1.5rem;
+}
+
+
+.team{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.container5{
+    width: 90%;
+    height: auto;
+}

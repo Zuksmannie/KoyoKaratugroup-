@@ -610,9 +610,15 @@ button:hover {
 
 
 
-
-@media screen and (max-width: 768px) {
-  .container1, .container2, .container3, .container4, .container5, .container6, .container7 {
+/* Tablet devices (768px and below) */
+@media (max-width: 768px) {
+  .container1,
+  .container2,
+  .container3,
+  .container4,
+  .container5,
+  .container6,
+  .container7 {
     flex-direction: column;
     align-items: center;
   }
@@ -620,88 +626,79 @@ button:hover {
   .nav-menu {
     flex-direction: column;
     gap: 1rem;
-    margin-top: 1rem;
   }
 
   .hero {
-    flex-direction: column;
     height: auto;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
   }
 
   .hero-left,
-  .hero-right {
-    width: 100%;
-  }
-
-  .hero-text-box h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-cta {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero-primary,
-  .hero-secondary {
-    width: 100%;
-  }
-
-  .scard-wrapper,
-  .team-cards,
-  .testimonial-cards {
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .about-stats,
-  .social-proof {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
+  .hero-right,
+  .about-text-box,
   .about-image-wrapper,
-  .hero-image-wrapper,
-  .team-image-box {
+  .popular-card,
+  .team-card {
     width: 100%;
+  }
+
+  .popular-cards,
+  .team-cards,
+  .scard-wrapper,
+  .about-stats,
+  .t-card-holder {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .scard {
+    width: 100%;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 20px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 375px) {
-  .testimonial{
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .hero-primary,
+  .hero-secondary,
+  .nav-cta,
+  .about-cta,
+  .cta-cta {
     width: 100%;
-    height: auto;
-
+    padding: 12px;
+    text-align: center;
   }
 
-  .container6{
-    width: 90%;
+  .container1,
+  .container2,
+  .container3,
+  .container4 {
+    width: 95%;
   }
 
-  .testimonial-card{
-    width: 100%;
+  .modal-heading {
+    font-size: 1.25rem;
   }
 
-  .team-card{
-    width: 100%;
+  .modal-subheading {
+    font-size: 0.9rem;
   }
 
-
+  .modal-description,
+  .modal-detail {
+    font-size: 0.9rem;
+  }
 }
-
-
-
-
-

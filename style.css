@@ -63,19 +63,12 @@ h1{
 
 
 
-/* Hamburger icon (only visible on mobile) */
+/* Hamburger styles */
 .hamburger {
   display: none;
   font-size: 28px;
   cursor: pointer;
 }
-
-/* Mobile menu: hidden by default */
-#mobileMenu {
-  display: flex;
-  gap: 2rem;
-}
-
 
 
 .hero{
@@ -654,6 +647,10 @@ button:hover {
   }
 
 
+.nav {
+    align-items: flex-start;
+  }
+
   .hamburger {
     display: block;
   }
@@ -661,37 +658,19 @@ button:hover {
   .nav-menu {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: white;
     width: 100%;
-    text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    gap: 1rem;
   }
 
-  .nav-menu.show {
+  .nav-menu.active {
     display: flex;
   }
 
-  .nav-menu a {
-    margin: 0.8rem 0;
-    font-size: 1rem;
+  .nav-cta {
+    width: 100%;
+    text-align: center;
   }
-
-  .nav-cta-wrapper {
-    display: none;
-  }
-
-  .nav-cta-mobile {
-    margin-top: 1rem;
-  }
-
-  .close-icon {
-    font-size: 24px;
-    align-self: flex-end;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    color: #333;
-  }
+}

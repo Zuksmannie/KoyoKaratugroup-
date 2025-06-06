@@ -77,12 +77,7 @@ function payNow() {
 }
 
 
-function toggleMenu() {
+  function toggleMenu() {
     const navMenu = document.getElementById("navMenu");
-    navMenu.classList.toggle("show");
-  }
-
-  function openBookingModal() {
-    alert("Open booking modal here!");
-    // Replace this with your actual modal logic
+    navMenu.classList.toggle("active");
   }

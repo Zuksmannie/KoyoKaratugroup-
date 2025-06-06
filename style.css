@@ -605,100 +605,35 @@ button:hover {
 
 
 
-
-
-
-
-
-/* Tablet devices (768px and below) */
 @media (max-width: 768px) {
-  .container1,
-  .container2,
-  .container3,
-  .container4,
-  .container5,
-  .container6,
-  .container7 {
+  .popular-cards,
+  .scard-wrapper,
+  .team-cards,
+  .t-card-holder {
     flex-direction: column;
     align-items: center;
   }
 
-  .nav-menu {
-    flex-direction: column;
-    gap: 1rem;
+  .popular-card,
+  .scard,
+  .team-card,
+  .testimonial-card {
+    width: 100% !important;
   }
 
-  .hero {
-    height: auto;
-    padding: 4rem 1rem;
-  }
-
-  .hero-left,
-  .hero-right,
   .about-text-box,
   .about-image-wrapper,
-  .popular-card,
-  .team-card {
-    width: 100%;
-  }
-
-  .popular-cards,
-  .team-cards,
-  .scard-wrapper,
-  .about-stats,
-  .t-card-holder {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .scard {
-    width: 100%;
-  }
-
-  iframe {
+  .hero-left,
+  .hero-right {
     width: 100% !important;
-    height: auto !important;
   }
 
-  h1 {
-    font-size: 2rem;
-  }
-
-  .modal-content {
-    width: 95%;
-    padding: 20px;
-  }
-}
-
-/* Mobile devices (480px and below) */
-@media (max-width: 480px) {
-  .hero-primary,
-  .hero-secondary,
-  .nav-cta,
-  .about-cta,
-  .cta-cta {
-    width: 100%;
-    padding: 12px;
-    text-align: center;
-  }
-
-  .container1,
   .container2,
   .container3,
-  .container4 {
-    width: 95%;
-  }
-
-  .modal-heading {
-    font-size: 1.25rem;
-  }
-
-  .modal-subheading {
-    font-size: 0.9rem;
-  }
-
-  .modal-description,
-  .modal-detail {
-    font-size: 0.9rem;
+  .container4,
+  .container5,
+  .container6 {
+    flex-direction: column;
+    align-items: center;
   }
 }

@@ -633,17 +633,20 @@ button:hover {
   }
 
 
+  h1{
+    font-size: 2rem;
+  }
+
+
   .hero{
     height: 100vh;
-    margin-top: 3rem;
-    padding-top: 4rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(67, 0, 167);
-    padding:6rem 0;
+    padding:12rem 0;
     color: white;
   }
 
@@ -654,11 +657,23 @@ button:hover {
     width: 100% !important;
   }
 
+
+  .hero-left,
+  .hero-right{
+    margin-top: 3rem;
+  }
+
   .about-text-box,
   .about-image-wrapper,
   .hero-left,
   .hero-right {
     width: 100% !important;
+  }
+
+
+  .container2{
+    display: flex;
+    flex-direction:column-reverse;
   }
 
   .container2,
@@ -672,17 +687,19 @@ button:hover {
 
 
 .nav {
-    align-items: flex-start;
+    align-items: center;
   }
 
 .nav-menu {
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     position: absolute;
     top: 60px; /* adjust according to navbar height */
     right: 0;
-    width: 200px;
+    width: 100%;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-radius: 5px;
     padding: 1rem;

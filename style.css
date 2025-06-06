@@ -63,11 +63,20 @@ h1{
 
 
 
-/* Hamburger styles */
+
+/* Hide hamburger on desktop */
 .hamburger {
   display: none;
-  font-size: 28px;
+  flex-direction: column;
   cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(67, 0, 167);
+  border-radius: 2px;
 }
 
 
@@ -623,6 +632,21 @@ button:hover {
     align-items: center;
   }
 
+
+  .hero{
+    height: 100vh;
+    margin-top: 3rem;
+    padding-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(67, 0, 167);
+    padding:6rem 0;
+    color: white;
+  }
+
   .popular-card,
   .scard,
   .team-card,
@@ -651,26 +675,33 @@ button:hover {
     align-items: flex-start;
   }
 
-  .hamburger {
-    display: block;
-  }
-
-  .nav-menu {
+.nav-menu {
     display: none;
     flex-direction: column;
-    width: 100%;
     background-color: white;
+    position: absolute;
+    top: 60px; /* adjust according to navbar height */
+    right: 0;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
     padding: 1rem;
-    margin-top: 1rem;
-    gap: 1rem;
+    z-index: 1000;
   }
 
   .nav-menu.active {
     display: flex;
   }
 
-  .nav-cta {
-    width: 100%;
-    text-align: center;
+  .container1 {
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-cta-wrapper {
+    display: none; /* Hide the button on mobile or you can place it inside the menu */
   }
 }

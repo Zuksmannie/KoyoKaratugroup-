@@ -140,8 +140,8 @@ h1{
 
 .social-proof{
     width: fit-content;
-    background-color: rgba(255, 255, 255, 0.282);
-    margin-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.089);
+    margin-top: 3rem;
     padding: 12px 24px;
     display: flex;
     flex-direction: row;
@@ -208,6 +208,188 @@ h1{
 }
 
 
+.popular{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0rem;
+}
+
+
+.p-container{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.popular-cards{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.popular-card{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+}
+
+.popular-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+.modal-content {
+  background-color: #fff;
+  margin: 8% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-heading {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.modal-subheading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.modal-description {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.modal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.modal-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: #f9f9f9;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.modal-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .services{
     width: 100%;
     height: auto;
@@ -254,10 +436,19 @@ h1{
     height: auto;
 }
 
+.services-card-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 .scard-wrapper{
     display: flex;
     flex-direction: row;
-    justify-content: center;align-items: center;
+    justify-content: center;
+    align-items: center;
     gap: 1.5rem;
 }
 
@@ -276,3 +467,241 @@ h1{
     width: 90%;
     height: auto;
 }
+
+.team-cards{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+}
+
+
+.team-card{
+    background-color: rgb(86, 114, 255);
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+
+.team-image-box{
+    width: 100%;
+    height: auto;
+}
+
+
+.team-image{
+    width: 100%;
+}
+
+.team-text-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+}
+
+.team-subtext{
+    /* font-size: 12px; */
+}
+
+
+.testimonial{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0rem;
+    background-color: rgb(86, 114, 255);
+
+}
+
+.container6{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.testimonial-textbox{
+    color: white;
+}
+.t-card-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-cards{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+
+.testimonial-card{
+    background-color: white;
+    border-radius: 3px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+
+.cta{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 5rem 0rem;
+}
+
+.container7{
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+.cta-cta{
+    padding: 8px 16px;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .container1, .container2, .container3, .container4, .container5, .container6, .container7 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 4rem 2rem;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-text-box h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-primary,
+  .hero-secondary {
+    width: 100%;
+  }
+
+  .scard-wrapper,
+  .team-cards,
+  .testimonial-cards {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-stats,
+  .social-proof {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-image-wrapper,
+  .hero-image-wrapper,
+  .team-image-box {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 375px) {
+  .testimonial{
+    width: 100%;
+    height: auto;
+
+  }
+
+  .container6{
+    width: 90%;
+  }
+
+  .testimonial-card{
+    width: 100%;
+  }
+
+  .team-card{
+    width: 100%;
+  }
+
+
+}
+
+
+
+
+

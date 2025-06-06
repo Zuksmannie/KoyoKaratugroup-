@@ -24,7 +24,7 @@
 
 
             <div class="nav-cta-wrapper">
-                <button class="nav-cta">Book a Class</button>
+                <button class="nav-cta" onclick="openBookingModal()">Book a Class</button>
             </div>
         </div>        
     </div>
@@ -39,8 +39,8 @@
                 </div>
     
                 <div class="hero-cta">
-                    <button class="hero-primary">Book Class Now</button>
-                    <button class="hero-secondary">Join A class</button>
+                    <button class="hero-primary" onclick="openBookingModal()">Join KoyoKaratu Today</button>
+                    <button class="hero-secondary" onclick="openBookingModal()">Join A class</button>
                 </div>
     
                 <div class="social-proof">
@@ -61,15 +61,116 @@
         </div>
     </div>
 
+    <!-- Booking Modal -->
+<div id="booking-modal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); overflow:auto;">
+  <div class="modal-content" style="background:#fff; margin:5% auto; padding:20px; width:90%; max-width:700px; border-radius:8px; position:relative;">
+    <span class="close" onclick="closeBookingModal()" style="position:absolute; top:10px; right:15px; font-size:28px; cursor:pointer;">&times;</span>
+    <h2>Book a Class</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxvSPH7bm4dttpA0LLJio-ASZ_kFtU85ZOkMH2kE38TV5IZA/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+</div>
+
+<!-- Payment Modal -->
+<div id="payment-modal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); overflow:auto;">
+  <div class="modal-content" style="background:#fff; margin:5% auto; padding:20px; width:90%; max-width:400px; border-radius:8px; position:relative; text-align:center;">
+    <span class="close" onclick="closePaymentModal()" style="position:absolute; top:10px; right:15px; font-size:28px; cursor:pointer;">&times;</span>
+    <h2>Pay for Your Tutorial</h2>
+    <button onclick="payNow()" style="padding:12px 30px; background:#00A86B; border:none; color:#fff; font-size:18px; border-radius:5px; cursor:pointer;">Pay Now</button>
+  </div>
+</div>
+
+
+
+    <div class="popular">
+  <div class="p-container">
+    <div class="popular-textbox">
+      <h2>Popular Subjects</h2>
+      <p>From Public Policy to International Relations, we cover the subjects that matter most to you.</p>
+    </div>
+
+    <div class="popular-cards">
+      <div class="popular-card" onclick="openModal(0)">
+        <img src="images/college class-rafiki.svg" alt="" class="popular-image">
+        <h3>Public Policy</h3>
+      </div>
+
+      <div class="popular-card" onclick="openModal(1)">
+        <img src="images/college class-rafiki.svg" alt="" class="popular-image">
+        <h3>Introduction to IR</h3>
+      </div>
+
+      <div class="popular-card" onclick="openModal(2)">
+        <img src="images/college class-rafiki.svg" alt="" class="popular-image">
+        <h3>Nigeria Government & Politics</h3>
+      </div>
+
+      <div class="popular-card" onclick="openModal(3)">
+        <img src="images/college class-rafiki.svg" alt="" class="popular-image">
+        <h3>Comparative Politics</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modal-title" class="modal-heading"></h2>
+    <p id="modal-tutor" class="modal-subheading"></p>
+    <p id="modal-description" class="modal-description"></p>
+
+   <div class="modal-details">
+  <div class="modal-detail">
+    <span class="modal-icon">📅</span>
+    <div>
+      <strong>Timetable:</strong>
+      <p id="modal-timetable">Mondays & Wednesdays, 4:00 PM – 6:00 PM (WAT)</p>
+    </div>
+  </div>
+
+  <div class="modal-detail">
+    <span class="modal-icon">📝</span>
+    <div>
+      <strong>Quizzes:</strong>
+      <p id="modal-quizzes">3 Quizzes</p>
+    </div>
+  </div>
+
+  <div class="modal-detail">
+    <span class="modal-icon">🎥</span>
+    <div>
+      <strong>Tutorial Type:</strong>
+      <p id="modal-type">Live Zoom Sessions + Weekly Case Studies</p>
+    </div>
+  </div>
+</div>
+
+    <p class="modal-price">Price: <span id="modal-price-value">₦5,000</span></p>
+    <p class="modal-cta">Ready to master this subject? Click below to pay and secure your spot!</p>
+
+
+
+
+    <button onclick="payNow()">Pay for Tutorial</button>
+  </div>
+</div>
 
 
     <div class="about">
         <div class="container3">
             <div class="about-text-box">
                 <h2>Built for Students Who Want More</h2>
-                <p class="about-body">Whether youre stuck on a topic, preparing for exams or planning your future--KoyoKaratu brings the right people and resources to your fingertips</p>
+                <p class="about-body">A Smarter Way to Learn & Prepare
+KoyoKaratu isn’t just another tutoring app — it’s a learning ecosystem, built by students for students. <br>
 
-                <button class="about-cta">Read more</button>
+From coursework and project support to career documents and real-time mentorship, we bring personalised, accessible academic help to your fingertips.
+
+We started at Gombe State University — but our mission is bigger:
+To help every Nigerian student unlock their full potential.
+
+</p>
+
 
                 <div class="about-stats">
 
@@ -78,6 +179,9 @@
                     <h3>15+ Certifications</h3>
 
                 </div>
+
+                <button class="about-cta">Read more</button>
+
             </div>
 
             <div class="about-image-wrapper">
@@ -98,8 +202,8 @@
             </div>
 
 
-
-            <div class="scard-wrapper">
+            <div class="services-card-wrapper">
+                 <div class="scard-wrapper">
                 <div class="scard">
                     <div class="scard-image">
                         <img src="images/Teacher student-rafiki.svg" alt="" class="scard-img">
@@ -132,7 +236,72 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis tempore deleniti facere! A, doloremque?</p>
                     </div>
                 </div>
+
+                <!-- <div class="scard">
+                    <div class="scard-image">
+                        <img src="images/Teacher student-rafiki.svg" alt="" class="scard-img">
+                    </div>
+
+                    <div class="scard-text">
+                        <h3>CV/RESUME Services</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis tempore deleniti facere! A, doloremque?</p>
+                    </div>
+                </div> -->
+
             </div>
+
+              <div class="scard-wrapper">
+                <div class="scard">
+                    <div class="scard-image">
+                        <img src="images/Teacher student-rafiki.svg" alt="" class="scard-img">
+                    </div>
+
+                    <div class="scard-text">
+                        <h3>Private Tutoring</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis tempore deleniti facere! A, doloremque?</p>
+                    </div>
+                </div>
+
+                <div class="scard">
+                    <div class="scard-image">
+                        <img src="images/Social distance at school-rafiki.svg" alt="" class="scard-img">
+                    </div>
+
+                    <div class="scard-text">
+                        <h3>Group Tutoring</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis tempore deleniti facere! A, doloremque?</p>
+                    </div>
+                </div>
+
+                <div class="scard">
+                    <div class="scard-image">
+                        <img src="images/Teacher student-rafiki.svg" alt="" class="scard-img">
+                    </div>
+
+                    <div class="scard-text">
+                        <h3>Mentorship Sessions</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis tempore deleniti facere! A, doloremque?</p>
+                    </div>
+                </div>
+
+                <!-- <div class="scard">
+                    <div class="scard-image">
+                        <img src="images/Teacher student-rafiki.svg" alt="" class="scard-img">
+                    </div>
+
+                    <div class="scard-text">
+                        <h3>CV/RESUME Services</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis tempore deleniti facere! A, doloremque?</p>
+                    </div>
+                </div> -->
+
+            </div>
+
+            </div>
+
+           
+
+
             
         </div>
     </div>
@@ -141,8 +310,171 @@
     <div class="team">
         <div class="container5">
             <div class="team-textbox">
-                <h2>Meet our tutors</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit officiis libero quis sunt sint eaque accusamus natus?</p>
+                <h2>We’re Students, Scholars, and Builders.</h2>
+                <p> Meet the minds behind KoyoKaratu:</p>
+            </div>
+
+
+            <div class="team-cards">
+                <div class="team-card">
+                    <div class="team-image-box">
+                        <img src="images/young-black-woman-with-glasses-stands-outdoors-arms-crossed-looking-camera-diverse-group-volunteers-supports-non-profit-program-dedicated-hunger-relief-helping-needy-individuals.jpg" alt="" class="team-image">
+
+                    </div>
+
+                    <div class="team-text-box">
+                        <h4>Emmanuel Uzuku</h4>
+                        <p>Founder | Designer | Writer</p>
+
+                    </div>
+                </div>
+
+
+                 <div class="team-card">
+                    <div class="team-image-box">
+                        <img src="images/young-black-woman-with-glasses-stands-outdoors-arms-crossed-looking-camera-diverse-group-volunteers-supports-non-profit-program-dedicated-hunger-relief-helping-needy-individuals.jpg" alt="" class="team-image">
+
+                    </div>
+
+                    <div class="team-text-box">
+                        <h4>Zack Jackson</h4>
+                        <p>Content | Training Lead </p>
+
+                    </div>
+                </div>
+
+
+                 <div class="team-card">
+                    <div class="team-image-box">
+                        <img src="images/young-black-woman-with-glasses-stands-outdoors-arms-crossed-looking-camera-diverse-group-volunteers-supports-non-profit-program-dedicated-hunger-relief-helping-needy-individuals.jpg" alt="" class="team-image">
+
+                    </div>
+
+                    <div class="team-text-box">
+                        <h4>Alameen Gidado</h4>
+                        <p>Training Lead | Tutor</p>
+
+                    </div>
+                </div>
+
+                 <div class="team-card">
+                    <div class="team-image-box">
+                        <img src="images/young-black-woman-with-glasses-stands-outdoors-arms-crossed-looking-camera-diverse-group-volunteers-supports-non-profit-program-dedicated-hunger-relief-helping-needy-individuals.jpg" alt="" class="team-image">
+
+                    </div>
+
+                    <div class="team-text-box">
+                        <h4>Amami Faith</h4>
+                        <p class="team-subtext">Head of Community | Writer </p>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <div class="container6">
+            <div class="testimonial-textbox">
+                <h2>What Students Say About Us</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam nisi quibusdam ex aspernatur corrupti voluptas.</p>
+
+            </div>
+
+            <div class="t-card-holder">
+                <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="t-image-box">
+                        <img src="images/grid.svg" alt="">
+                    </div>
+
+                    <div class="t-textbox">
+                        <p>Thanks to KoyoKaratu, I finally understood MacroEconomics. The tutor was patient and clear.</p>
+                        <h3>Yusuf, 300L Economics</h3>
+                    </div>
+
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="t-image-box">
+                        <img src="images/grid.svg" alt="">
+                    </div>
+
+                    <div class="t-textbox">
+                        <p>Thanks to KoyoKaratu, I finally understood MacroEconomics. The tutor was patient and clear.</p>
+                        <h3>Yusuf, 300L Economics</h3>
+                    </div>
+
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="t-image-box">
+                        <img src="images/grid.svg" alt="">
+                    </div>
+
+                    <div class="t-textbox">
+                        <p>Thanks to KoyoKaratu, I finally understood MacroEconomics. The tutor was patient and clear.</p>
+                        <h3>Yusuf, 300L Economics</h3>
+                    </div>
+
+                </div>
+            </div>
+
+             <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="t-image-box">
+                        <img src="images/grid.svg" alt="">
+                    </div>
+
+                    <div class="t-textbox">
+                        <p>Thanks to KoyoKaratu, I finally understood MacroEconomics. The tutor was patient and clear.</p>
+                        <h3>Yusuf, 300L Economics</h3>
+                    </div>
+
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="t-image-box">
+                        <img src="images/grid.svg" alt="">
+                    </div>
+
+                    <div class="t-textbox">
+                        <p>Thanks to KoyoKaratu, I finally understood MacroEconomics. The tutor was patient and clear.</p>
+                        <h3>Yusuf, 300L Economics</h3>
+                    </div>
+
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="t-image-box">
+                        <img src="images/grid.svg" alt="">
+                    </div>
+
+                    <div class="t-textbox">
+                        <p>Thanks to KoyoKaratu, I finally understood MacroEconomics. The tutor was patient and clear.</p>
+                        <h3>Yusuf, 300L Economics</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <div class="cta">
+        <div class="container7">
+            <div class="cta-textbox">
+                <h2>Whether you're trying to pass a tough course, win a scholarship, <br>or just need guidance — KoyoKaratu is your growth partner.</h2>
+                <p>Join the smarter way to study. No stress. Just support.</p>
+
+                <button class="cta-cta">Start for Free</button>
             </div>
         </div>
     </div>
@@ -164,8 +496,9 @@
 
 
 
+    <script src="https://js.paystack.co/v1/inline.js"></script>
 
 
-    
+      <script src="script.js"></script>
 </body>
 </html>

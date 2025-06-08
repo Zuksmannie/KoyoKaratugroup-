@@ -471,6 +471,162 @@ button:hover {
 }
 
 
+
+.scard:hover {
+  transform: translateY(-10px);
+}
+
+/* Main content
+.scard-image {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scard-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.scard-text {
+  padding: 1rem;
+  text-align: center;
+} */
+
+/* Hover Info Overlay */
+.scard-info {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 1rem;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  overflow-y: auto;
+}
+
+.scard:hover .scard-info {
+  opacity: 1;
+}
+
+/* .scard {
+  position: relative;
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+} */
+
+.scard-info {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  padding: 0 1rem;
+}
+
+.scard.show-info .scard-info {
+  max-height: 300px;
+  opacity: 1;
+  padding: 1rem;
+}
+
+.toggle-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.book-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #1e7e34;
+}
+
+.booking-modal {
+  display: none;
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.booking-modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .team{
     width: 100%;
     height: auto;
@@ -589,6 +745,17 @@ button:hover {
     align-items: center;
     gap: 1rem;
 
+}
+
+.t-image-box{
+    width: 20%;
+    height: auto;
+}
+
+.t-image{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 

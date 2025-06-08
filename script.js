@@ -83,3 +83,69 @@ const navMenu = document.getElementById('nav-menu');
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
+
+
+  document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', function () {
+      const card = this.closest('.scard');
+      card.classList.toggle('show-info');
+      this.textContent = card.classList.contains('show-info') ? 'Show Less' : 'Learn More';
+    });
+  });
+
+
+  const modal = document.getElementById('booking-modal');
+  const closeModalBtn = document.querySelector('.close-modal');
+  const modalTitle = document.getElementById('modal-service-title');
+
+  document.querySelectorAll('.book-btn').forEach(button => {
+    button.addEventListener('click', function () {
+      const serviceTitle = this.closest('.scard').querySelector('h3').textContent;
+      modalTitle.textContent = serviceTitle;
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', e => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('bookingModal');
+  const closeModalBtn = modal.querySelector('.close-modal');
+  const modalTitle = modal.querySelector('h3'); // If you want to set service title here
+
+  document.querySelectorAll('.book-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Set modal title dynamically if needed
+      const serviceTitle = button.closest('.scard').querySelector('h3').textContent;
+      modalTitle.textContent = `Book This Service: ${serviceTitle}`;
+
+      // Show modal
+      modal.classList.add('show');
+    });
+  });
+
+  closeModalBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+    }
+  });
+
+  document.getElementById('bookingForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Booking submitted! We will contact you soon.');
+    modal.classList.remove('show');
+    e.target.reset();
+  });
+});
